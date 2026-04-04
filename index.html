@@ -29,26 +29,14 @@
       text-align: center;
     }
 
-    /* ESCURECER FUNDO */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: -1;
-    }
-
     .logo {
       max-width: 320px;
       width: 100%;
       margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
     }
 
     .button-container {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.7);
       padding: 20px;
       border-radius: 16px;
       display: flex;
@@ -56,9 +44,7 @@
       gap: 12px;
       width: 100%;
       max-width: 300px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-      position: relative;
-      z-index: 1;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
     .button-container a {
@@ -68,41 +54,34 @@
       font-size: 16px;
       font-weight: bold;
       color: white;
-      transition: all 0.25s ease;
+      transition: transform 0.3s ease-in-out;
+      transform-origin: center;
       display: inline-block;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    /* BOTÃO PRINCIPAL */
-    .button-container a.delivery {
-      background: linear-gradient(135deg, #FB923C, #F97316);
-      transform: scale(1.05);
-    }
-
+    /* CORES POR CLASSE (CORRETO) */
+    .button-container a.delivery { background-color: #FB923C; }
     .button-container a.whatsapp { background-color: #22C55E; }
     .button-container a.localizacao { background-color: #3B82F6; }
-
-    .button-container a.cardapio {
-      background-color: #FACC15;
-      color: #000;
-    }
-
+    .button-container a.cardapio { background-color: #FACC15; color: #000; }
     .button-container a.instagram { background-color: #EF4444; }
     .button-container a.tripadvisor { background-color: #0F766E; }
 
+    /* GOOGLE AMARELO */
     .button-container a.google {
-      background: linear-gradient(135deg, #FFD54F, #F59E0B);
-      color: #000;
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+color: #000;
     }
 
     .button-container a:hover {
-      transform: scale(1.05);
+      transform: rotate(-2deg) scale(1.05);
       opacity: 0.95;
     }
 
     @media (max-width: 500px) {
       .button-container a {
-        font-size: 15px;
+        font-size: 16px;
         padding: 12px 20px;
       }
     }
@@ -119,15 +98,15 @@
     </a>
 
     <a href="https://wa.me/5522999826331" target="_blank" class="whatsapp">
-      Falar no WhatsApp
+      WhatsApp
     </a>
 
     <a href="https://www.google.com/maps/place/Astral+Beach+Food/data=!4m2!3m1!1s0x0:0x71e15ba1233946c7?sa=X&ved=1t:2428&ictx=111" target="_blank" class="localizacao">
-      Como Chegar
+      Localização
     </a>
 
     <a href="https://drive.google.com/file/d/1hjSURhHWdE-7OKBbWpvP01T4cRKHj7oU/view" target="_blank" class="cardapio">
-      Ver Cardápio
+      Cardápio
     </a>
 
     <a href="https://www.instagram.com/astralbeach.food/" target="_blank" class="instagram">
@@ -139,7 +118,7 @@
     </a>
 
     <a href="https://search.google.com/local/writereview?placeid=ChIJY1u6wSNxmAARx0Y5I6FbkXE" target="_blank" class="google">
-      ⭐ Google avaliações
+      ⭐ Google Avaliações
     </a>
 
   </div>
