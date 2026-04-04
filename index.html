@@ -59,14 +59,20 @@
       display: inline-block;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-.button-container a:nth-child(1) { background-color: #FACC15; } /* Cardápio amarelo */
-.button-container a:nth-child(2) { background-color: #22C55E; } /* WhatsApp */
-.button-container a:nth-child(3) { background-color: #FB923C; } /* Delivery */
-.button-container a:nth-child(4) { background-color: #EF4444; } /* Instagram */
-.button-container a:nth-child(5) { background-color: #0F766E; } /* TripAdvisor */
-.button-container a:nth-child(6) { background-color: #3B82F6; } /* Localização azul */
 
+    /* CORES POR CLASSE (CORRETO) */
+    .button-container a.delivery { background-color: #FB923C; }
+    .button-container a.whatsapp { background-color: #22C55E; }
+    .button-container a.localizacao { background-color: #3B82F6; }
+    .button-container a.cardapio { background-color: #FACC15; color: #000; }
+    .button-container a.instagram { background-color: #EF4444; }
+    .button-container a.tripadvisor { background-color: #0F766E; }
 
+    /* GOOGLE AMARELO */
+    .button-container a.google {
+      background: linear-gradient(135deg, #FACC15, #EAB308);
+      color: #000;
+    }
 
     .button-container a:hover {
       transform: rotate(-2deg) scale(1.05);
@@ -81,17 +87,40 @@
     }
   </style>
 </head>
+
 <body>
   <img src="logo.png" alt="Logo Astral Beach" class="logo">
 
   <div class="button-container">
     
-    <a href="https://drive.google.com/file/d/1hjSURhHWdE-7OKBbWpvP01T4cRKHj7oU/view" target="_blank">Cardápio</a>
-    <a href="https://wa.me/5522999826331" target="_blank">WhatsApp</a>
-    <a href="https://astralbeach.saipos.com/home" target="_blank">Delivery | Retirada</a>
-    <a href="https://www.instagram.com/astralbeach.food/" target="_blank">Instagram</a>
-    <a href="https://www.tripadvisor.com.br/Restaurant_Review-g1056623-d15137632-Reviews-Astral_Beach_Food-Arraial_do_Cabo_State_of_Rio_de_Janeiro.html" target="_blank">TripAdvisor</a>
-    <a href="https://www.google.com/maps/place/Astral+Beach+Food/data=!4m2!3m1!1s0x0:0x71e15ba1233946c7?sa=X&ved=1t:2428&ictx=111" target="_blank">Localização</a>
+    <a href="https://astralbeach.saipos.com/home" target="_blank" class="delivery">
+      Delivery | Retirada
+    </a>
+
+    <a href="https://wa.me/5522999826331" target="_blank" class="whatsapp">
+      WhatsApp
+    </a>
+
+    <a href="https://www.google.com/maps/place/Astral+Beach+Food/data=!4m2!3m1!1s0x0:0x71e15ba1233946c7?sa=X&ved=1t:2428&ictx=111" target="_blank" class="localizacao">
+      Localização
+    </a>
+
+    <a href="https://drive.google.com/file/d/1hjSURhHWdE-7OKBbWpvP01T4cRKHj7oU/view" target="_blank" class="cardapio">
+      Cardápio
+    </a>
+
+    <a href="https://www.instagram.com/astralbeach.food/" target="_blank" class="instagram">
+      Instagram
+    </a>
+
+    <a href="https://www.tripadvisor.com.br/Restaurant_Review-g1056623-d15137632-Reviews-Astral_Beach_Food-Arraial_do_Cabo_State_of_Rio_de_Janeiro.html" target="_blank" class="tripadvisor">
+      TripAdvisor
+    </a>
+
+    <a href="https://search.google.com/local/writereview?placeid=ChIJY1u6wSNxmAARx0Y5I6FbkXE" target="_blank" class="google">
+      ⭐ Avaliar no Google
+    </a>
+
   </div>
 </body>
 </html>
